@@ -1,0 +1,80 @@
+.sideBar {
+  position: relative;
+  color: black;
+  margin: 10px;
+
+  .deskBg {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    height: 480px;
+
+    /* display: inline-block;
+     width: 100%;
+     height: 480px; */
+  }
+
+  .stages {
+    display: inline-block;
+    position: absolute;
+    left: 8%;
+    padding-top: 12%;
+
+    .steps {
+      font-size: 60%;
+      /* color: $white; */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+
+      .pageIndicator {
+        text-decoration: none;
+        font-size: 13px;
+        font-size: bold;
+        /* background-color: $purplish-blue; */
+        /* color: $white; */
+        padding: 5px 8px;
+        /* border: 1px solid $white; */
+        border-radius: 25px;
+        margin-top: 10px;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+
+      .one {
+        font-weight: bold;
+        /* background-color: $light-blue; */
+        /* color: $marine-blue; */
+      }
+
+      button {
+        /* background-color: $purplish-blue; */
+        /* color: $white; */
+        padding: 4px 8px;
+        /* border: 1px solid $white; */
+        border-radius: 20px;
+        margin-top: 2px;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+
+      div {
+        vertical-align: middle;
+
+        .step {
+          display: block;
+          /* color: $cool-gray; */
+          margin: 2px;
+          margin-top: 10px;
+        }
+
+        .stepText {
+          font-weight: 700;
+          display: block;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

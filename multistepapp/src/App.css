@@ -1,0 +1,10 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* // align-content: end; */
+  margin: 40px 0;
+}
