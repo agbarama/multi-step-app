@@ -1,0 +1,92 @@
+.formInput {
+  width: 83%;
+  margin-top: 60px;
+  margin-right: 9%;
+  font-size: 14px;
+  padding: 0 10px;
+  margin: 30px 10px;
+  margin-top: 60px;
+  color: hsl(213, 96%, 18%);
+  /* color: $marine-blue; */
+  margin-left: 9%;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    color: hsl(231, 11%, 63%);
+    /* color: $cool-gray; */
+  }
+
+  label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .err {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    column-gap: 135px;
+
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    .name {
+      margin-right: 56px;
+    }
+
+    .email {
+      margin-right: 6px;
+    }
+
+    /* Javascript error message */
+    .errorMessage {
+      /* display: none; */
+      font-size: 12px;
+      /* color: $strawberry-red; */
+      color: hsl(354, 84%, 57%);
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+  }
+
+  input {
+    padding: 2.3% 3.45%;
+    padding-right: 35.5%;
+    border-radius: 8px;
+    cursor: pointer;
+    /* margin: 10px 0; */
+    border: 1px solid #ccc;
+  }
+
+  input:focus {
+    outline-color: hsl(243, 100%, 62%);
+    /* outline-color: $purplish-blue; */
+  }
+
+  .phoneForm {
+    /* border: 1px solid $strawberry-red; */
+    border: 1px solid hsl(354, 84%, 57%);
+  }
+
+  .btn {
+    display: block;
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(0, 0%, 100%);
+    /* background-color: $marine-blue; */
+    /* color: $white; */
+    padding: 2.3% 6.9%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 16.1%;
+    cursor: pointer;
+    margin-left: 58.6%;
+  }
+}
