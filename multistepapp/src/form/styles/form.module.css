@@ -71,7 +71,7 @@
     /* outline-color: $purplish-blue; */
   }
 
-  .phoneForm {
+  .borderErr {
     /* border: 1px solid $strawberry-red; */
     border: 1px solid hsl(354, 84%, 57%);
   }

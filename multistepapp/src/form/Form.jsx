@@ -1,11 +1,29 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./styles/form.module.css";
 
 const Form = () => {
+  // Input value
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+
+  // Form submit array to save inputs
   const [formInputs, setFormInputs] = useState([]);
+
+  // state for Error message
+  const [nameErr, setNameErr] = useState("");
+  const [emailErr, setEmailErr] = useState("");
+  const [phoneErr, setPhoneErr] = useState("");
+
+  // state for border color
+  const [isNameErrBorder, setIsNameErrBorder] = useState(false);
+  const [isEmailErrBorder, setIsEmailErrBorder] = useState(false);
+  const [isPhoneErrBorder, setIsPhoneErrBorder] = useState(false);
+
+  // Ref DOM manipulated
+  const nameInput = useRef();
+  const emailInput = useRef();
+  const phoneInput = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,10 +33,36 @@ const Form = () => {
       email: email,
       phoneNumber: number,
     });
-    setName("");
-    setEmail("");
-    setNumber("");
+    // setName("");
+    // setEmail("");
+    // setNumber("");
     console.log(formInputs);
+  };
+
+  const handlePageChange = () => {
+    if (nameInput.current.value.trim() === "") {
+      setNameErr("This field is required");
+      setIsNameErrBorder(true);
+    } else {
+      setNameErr("");
+      setIsNameErrBorder(false);
+    }
+
+    if (emailInput.current.value.trim() === "") {
+      setEmailErr("This field is required");
+      setIsEmailErrBorder(true);
+    } else {
+      setEmailErr("");
+      setIsEmailErrBorder(false);
+    }
+
+    if (phoneInput.current.value.trim() === "") {
+      setPhoneErr("This field is required");
+      setIsPhoneErrBorder(true);
+    } else {
+      setPhoneErr("");
+      setIsPhoneErrBorder(false);
+    }
   };
 
   return (
@@ -30,57 +74,53 @@ const Form = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className={styles.err}>
-            <label for="name" className={styles.name}>
-              Name
-            </label>
-            <div
-              className={styles.errorMessage}
-              // id={js - err - msg - n}
-            ></div>
+            <label className={styles.name}>Name</label>
+            <div className={styles.errorMessage}>{nameErr}</div>
           </div>
           <input
-            // className={jsFormName}
+            className={isNameErrBorder ? styles.borderErr : ""}
             type="text"
             id="name"
             name="name"
             placeholder="e.g. Stephen King"
             value={name}
+            ref={nameInput}
             onChange={(e) => setName(e.target.value)}
           />
 
           <div className={styles.err}>
-            <label for="email" className={styles.email}>
-              Email Address
-            </label>
-            <div className={styles.errorMessage}></div>
+            <label className={styles.email}>Email Address</label>
+            <div className={styles.errorMessage}>{emailErr}</div>
           </div>
           <input
-            // className={jsFormEmail}
+            className={isEmailErrBorder ? styles.borderErr : ""}
             type="email"
             id="email"
             name="email"
             placeholder="e.g. stephenking@lorem.com"
             value={email}
+            ref={emailInput}
             onChange={(e) => setEmail(e.target.value)}
           />
 
           <div className={styles.err}>
-            <label for="phone" className={styles.phone}>
-              Phone Number
-            </label>
-            <div className={styles.errorMessage}></div>
+            <label className={styles.phone}>Phone Number</label>
+            <div className={styles.errorMessage}>{phoneErr}</div>
           </div>
           <input
-            // className={jsFormPhone}
+            className={isPhoneErrBorder ? styles.borderErr : ""}
             type="tel"
             id="phone"
             name="phone"
             placeholder="e.g. +1 234 567 890"
             value={number}
+            ref={phoneInput}
             onChange={(e) => setNumber(e.target.value)}
           />
 
-          <button className={styles.btn}>Next</button>
+          <button onClick={handlePageChange} className={styles.btn}>
+            Next
+          </button>
         </form>
       </div>
     </div>
