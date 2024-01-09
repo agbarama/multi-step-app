@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "./styles/form.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   // Input value
@@ -20,10 +21,25 @@ const Form = () => {
   const [isEmailErrBorder, setIsEmailErrBorder] = useState(false);
   const [isPhoneErrBorder, setIsPhoneErrBorder] = useState(false);
 
-  // Ref DOM manipulated
-  const nameInput = useRef();
-  const emailInput = useRef();
-  const phoneInput = useRef();
+  // // Ref DOM manipulated
+  // const nameInput = useRef();
+  // const emailInput = useRef();
+  // const phoneInput = useRef();
+
+  // saved inputs in local storage
+  const activeName = localStorage.getItem("name");
+  const activeEmail = localStorage.getItem("email");
+  const activeNumber = localStorage.getItem("phone");
+
+  // variable to navigate to next page
+  const navigate = useNavigate();
+
+  // On refresh, if any inputs are saved in local storage, pass it to be the inputs value if empty
+  if (name === "" && email === "" && number === "") {
+    setName(activeName);
+    setEmail(activeEmail);
+    setNumber(activeNumber);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +56,7 @@ const Form = () => {
   };
 
   const handlePageChange = () => {
-    if (nameInput.current.value.trim() === "") {
+    if (name.trim() === "") {
       setNameErr("This field is required");
       setIsNameErrBorder(true);
     } else {
@@ -48,7 +64,7 @@ const Form = () => {
       setIsNameErrBorder(false);
     }
 
-    if (emailInput.current.value.trim() === "") {
+    if (email.trim() === "") {
       setEmailErr("This field is required");
       setIsEmailErrBorder(true);
     } else {
@@ -56,13 +72,25 @@ const Form = () => {
       setIsEmailErrBorder(false);
     }
 
-    if (phoneInput.current.value.trim() === "") {
+    if (number.trim() === "") {
       setPhoneErr("This field is required");
       setIsPhoneErrBorder(true);
     } else {
       setPhoneErr("");
       setIsPhoneErrBorder(false);
     }
+
+    // // variable to navigate to next page
+    // const navigate = useNavigate();
+
+    if (name.length > 0 && email.length > 0 && number.length > 0) {
+      navigate("/plan");
+    }
+
+    //store inputs to local storage
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("phone", number);
   };
 
   return (
@@ -84,7 +112,6 @@ const Form = () => {
             name="name"
             placeholder="e.g. Stephen King"
             value={name}
-            ref={nameInput}
             onChange={(e) => setName(e.target.value)}
           />
 
@@ -99,7 +126,6 @@ const Form = () => {
             name="email"
             placeholder="e.g. stephenking@lorem.com"
             value={email}
-            ref={emailInput}
             onChange={(e) => setEmail(e.target.value)}
           />
 
@@ -114,7 +140,6 @@ const Form = () => {
             name="phone"
             placeholder="e.g. +1 234 567 890"
             value={number}
-            ref={phoneInput}
             onChange={(e) => setNumber(e.target.value)}
           />
 
