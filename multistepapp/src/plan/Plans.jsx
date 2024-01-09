@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../form/Navbar";
 import style from "../form/styles/home.module.css";
 import styles from "./styles/plans.module.css";
+import PlanList from "./PlanList";
 
 const Plans = () => {
   return (
@@ -10,7 +11,9 @@ const Plans = () => {
       <div class={styles.plan}>
         <h1>Select your plan</h1>
         <p class="p">You have the option of monthly or yearly billing.</p>
-        <div id="reload" class="boxes js-boxes"></div>
+        <div id="reload" class="boxes js-boxes">
+          <PlanList />
+        </div>
 
         <div class="duration-switch">
           <p class="mon-dur js-mon-dur dur-toggle">Monthly</p>
