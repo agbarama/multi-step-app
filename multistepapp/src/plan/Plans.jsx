@@ -17,6 +17,7 @@ const Plans = ({ plansArray, setPlansArray }) => {
         </p>
         <PlanList
           plansArray={plansArray}
+          setPlansArray={setPlansArray}
           displayToggleBonus={displayToggleBonus}
         />
         <DurationToggle

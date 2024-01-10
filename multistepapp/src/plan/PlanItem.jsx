@@ -1,15 +1,32 @@
+import { useState } from "react";
 import styles from "./styles/planitem.module.css";
 
-const PlanItem = ({ plan }) => {
+const PlanItem = ({ setPlanArray, plan, displayToggleBonus }) => {
+  const [planToggle, setPlanToggle] = useState(plan.toggle);
+
+  const handleClick = () => {
+    setPlanToggle(!planToggle);
+  };
+
   return (
-    <div className={styles.box} data-plan-name={plan.name}>
+    <div
+      onClick={() => handleClick(plan.name)}
+      className={`${styles.box} ${planToggle ? styles.toggleBox : ""}`}
+      data-plan-name={plan.name}
+    >
       <img className={styles.icons} src={plan.icon} alt="" />
       <div>
         <p className={styles.planType}>{plan.name}</p>
         <p className={styles.price}>
           ${plan.price}/{plan.priceDuration}
         </p>
-        <p className={styles.bonus}>{plan.bonus}</p>
+        <p
+          className={`${styles.bonus} ${
+            displayToggleBonus ? styles.toggleBonus : ""
+          }`}
+        >
+          {plan.bonus}
+        </p>
       </div>
     </div>
   );

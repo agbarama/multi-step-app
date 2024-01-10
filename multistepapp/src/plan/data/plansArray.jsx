@@ -10,6 +10,7 @@ export let mPlans = [
     price: 9,
     priceDuration: "mo",
     sumDuration: "month",
+    toggle: false,
   },
 
   {
@@ -19,6 +20,7 @@ export let mPlans = [
     price: 12,
     priceDuration: "mo",
     sumDuration: "month",
+    toggle: false,
   },
 
   {
@@ -28,6 +30,7 @@ export let mPlans = [
     price: 15,
     priceDuration: "mo",
     sumDuration: "month",
+    toggle: false,
   },
 ];
 
