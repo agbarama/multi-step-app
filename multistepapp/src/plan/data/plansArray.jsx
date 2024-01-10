@@ -1,6 +1,10 @@
+import arcade from "../assets/icons/icon-arcade.svg";
+import advanced from "../assets/icons/icon-advanced.svg";
+import pro from "../assets/icons/icon-pro.svg";
+
 export let mPlans = [
   {
-    icon: "../img/icons/icon-pro.svg",
+    icon: arcade,
     name: "Arcade",
     duration: "Monthly",
     price: 9,
@@ -9,7 +13,7 @@ export let mPlans = [
   },
 
   {
-    icon: "../img/icons/icon-advanced.svg",
+    icon: advanced,
     name: "Advanced",
     duration: "Monthly",
     price: 12,
@@ -18,7 +22,7 @@ export let mPlans = [
   },
 
   {
-    icon: "../img/icons/icon-pro.svg",
+    icon: pro,
     name: "Pro",
     duration: "Monthly",
     price: 15,
@@ -29,7 +33,7 @@ export let mPlans = [
 
 export let yPlans = [
   {
-    icon: "../img/icons/icon-pro.svg",
+    icon: arcade,
     name: "Arcade",
     duration: "Yearly",
     price: 90,
@@ -39,7 +43,7 @@ export let yPlans = [
   },
 
   {
-    icon: "../img/icons/icon-advanced.svg",
+    icon: advanced,
     name: "Advanced",
     duration: "Yearly",
     price: 120,
@@ -49,7 +53,7 @@ export let yPlans = [
   },
 
   {
-    icon: "../img/icons/icon-pro.svg",
+    icon: pro,
     name: "Pro",
     duration: "Yearly",
     price: 150,

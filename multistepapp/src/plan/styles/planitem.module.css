@@ -1,0 +1,44 @@
+.box {
+  width: 80px;
+  padding: 20px 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: border 0.15s;
+
+  .icons {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .plan-type {
+    font-size: 13px;
+    color: hsl(213, 96%, 18%);
+
+    /* color: $marine-blue; */
+    margin-bottom: 5px;
+  }
+
+  .price {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .bonus {
+    display: none;
+    font-size: 11px;
+    color: hsl(213, 96%, 18%);
+
+    /* color: $marine-blue; */
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  /* // js */
+  .tog-bonus {
+    display: block;
+  }
+}
