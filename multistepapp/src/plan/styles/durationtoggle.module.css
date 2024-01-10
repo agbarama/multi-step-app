@@ -10,7 +10,7 @@
   border-radius: 2px;
 
   .monDur {
-    color: hsl(213, 96%, 18%);
+    /* color: hsl(213, 96%, 18%); */
     /* // color: $marine-blue; */
     font-size: 12px;
   }
@@ -55,8 +55,8 @@
   }
 
   /* // js toggle */
-  .toggleSwt {
-    .switch-indicator {
+  .toggledSwitch {
+    .switchIndicator {
       background-color: hsl(0, 0%, 100%);
       /* background-color: $white; */
       margin: 2px;

@@ -3,11 +3,15 @@ import { selectedP } from "./data/plansArray";
 import PlanItem from "./PlanItem";
 import styles from "./styles/planlist.module.css";
 
-const PlanList = () => {
+const PlanList = ({ plansArray, displayToggleBonus }) => {
   return (
     <div className={styles.boxes}>
-      {selectedP.map((plan) => (
-        <PlanItem key={plan.name} plan={plan} />
+      {plansArray.map((plan) => (
+        <PlanItem
+          key={plan.name}
+          plan={plan}
+          displayToggleBonus={displayToggleBonus}
+        />
       ))}
     </div>
   );

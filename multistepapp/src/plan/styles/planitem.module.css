@@ -38,7 +38,11 @@
   }
 
   /* // js */
-  .tog-bonus {
+  .toggleBonus {
     display: block;
   }
+}
+
+.toggleBox {
+  border: 1px solid hsl(243, 100%, 62%);
 }
