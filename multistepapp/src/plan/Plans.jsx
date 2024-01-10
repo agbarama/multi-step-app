@@ -8,22 +8,22 @@ const Plans = () => {
   return (
     <div className={style.container}>
       <Navbar />
-      <div class={styles.plan}>
+      <div className={styles.plan}>
         <h1>Select your plan</h1>
-        <p class="p">You have the option of monthly or yearly billing.</p>
-        <div id="reload" class="boxes js-boxes">
-          <PlanList />
-        </div>
+        <p className={styles.p}>
+          You have the option of monthly or yearly billing.
+        </p>
+        <PlanList />
 
-        <div class="duration-switch">
-          <p class="mon-dur js-mon-dur dur-toggle">Monthly</p>
-          <div class="switch js-switch-indic">
-            <div class="switch-indicator"></div>
+        <div className={styles.durationSwitch}>
+          <p className={styles.monDur}>Monthly</p>
+          <div className={styles.switch}>
+            <div className={styles.switchIndicator}></div>
           </div>
-          <p class="yr-dur js-yr-dur">Yearly</p>
+          <p className={styles.yrDur}>Yearly</p>
         </div>
-        <button class="btn-light desk-btn js-back-btn">Go Back</button>
-        <button class="btn-dark desk-btn js-next-btn">Next</button>
+        <button className={styles.btnLight}>Go Back</button>
+        <button className={styles.btnDark}>Next</button>
       </div>
     </div>
   );
