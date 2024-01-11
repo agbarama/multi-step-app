@@ -31,15 +31,15 @@ const Form = () => {
   const activeEmail = localStorage.getItem("email");
   const activeNumber = localStorage.getItem("phone");
 
-  // variable to navigate to next page
-  const navigate = useNavigate();
-
   // On refresh, if any inputs are saved in local storage, pass it to be the inputs value if empty
   if (name === "" && email === "" && number === "") {
     setName(activeName);
     setEmail(activeEmail);
     setNumber(activeNumber);
   }
+
+  // // variable to navigate to next page
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -80,7 +80,7 @@ const Form = () => {
       setIsPhoneErrBorder(false);
     }
 
-    // // variable to navigate to next page
+    // // // variable to navigate to next page
     // const navigate = useNavigate();
 
     if (name.length > 0 && email.length > 0 && number.length > 0) {
