@@ -11,11 +11,25 @@ const DurationToggle = ({
   const [toggled, setToggled] = useState(false);
   const [toggledDuration, setToggledDuration] = useState(false);
 
+  let activeSwitch = localStorage.getItem("activeS");
+  if (activeSwitch == toggled) {
+    setToggled(true);
+    setToggledDuration(true);
+    setDisplayToggleBonus(true);
+    setPlansArray(yPlans);
+  }
+
   const handleClick = () => {
     setToggled(!toggled);
     setToggledDuration(!toggledDuration);
     setDisplayToggleBonus(!displayToggleBonus);
     setPlansArray(plansArray === mPlans ? yPlans : mPlans);
+
+    if (localStorage.getItem("activeS")) {
+      localStorage.setItem("activeS", "");
+    } else {
+      localStorage.setItem("activeS", toggled);
+    }
   };
   return (
     <div className={styles.durationSwitch}>
