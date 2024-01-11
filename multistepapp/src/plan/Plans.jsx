@@ -4,9 +4,19 @@ import style from "../form/styles/home.module.css";
 import styles from "./styles/plans.module.css";
 import PlanList from "./PlanList";
 import DurationToggle from "./DurationToggle";
+import { useNavigate } from "react-router-dom";
 
 const Plans = ({ plansArray, setPlansArray }) => {
   const [displayToggleBonus, setDisplayToggleBonus] = useState(false);
+  const navigate = useNavigate();
+
+  const backButton = () => {
+    navigate("/");
+  };
+
+  const nextButton = () => {
+    navigate("/ads");
+  };
   return (
     <div className={style.container}>
       <Navbar />
@@ -27,8 +37,12 @@ const Plans = ({ plansArray, setPlansArray }) => {
           setDisplayToggleBonus={setDisplayToggleBonus}
         />
 
-        <button className={styles.btnLight}>Go Back</button>
-        <button className={styles.btnDark}>Next</button>
+        <button onClick={backButton} className={styles.btnLight}>
+          Go Back
+        </button>
+        <button onClick={nextButton} className={styles.btnDark}>
+          Next
+        </button>
       </div>
     </div>
   );
