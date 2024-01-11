@@ -1,0 +1,50 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: border 0.15s;
+
+  .input {
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+
+  .spaceBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    /* // row-gap: 80px; */
+    div {
+      /* // margin-right: 80px;
+      // vertical-align: end; */
+      vertical-align: middle;
+
+      .addOnsType {
+        color: hsl(213, 96%, 18%);
+        /* color: $marine-blue; */
+        margin: 0;
+      }
+
+      .addOnsText {
+        font-size: 11px;
+        color: hsl(231, 11%, 63%);
+        /* color: $cool-gray; */
+        margin: 0;
+      }
+    }
+
+    .price {
+      font-size: 11px;
+      color: hsl(243, 100%, 62%);
+      /* color: $purplish-blue; */
+      margin: 0;
+      vertical-align: middle;
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-export let addOns = [
+const addOnsArray = [
   {
     name: "Online service",
     access: "Access to multiple games",
@@ -20,3 +20,5 @@ export let addOns = [
     duration: "mo",
   },
 ];
+
+export default addOnsArray;
