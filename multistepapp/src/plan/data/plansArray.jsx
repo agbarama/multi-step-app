@@ -10,7 +10,7 @@ export let mPlans = [
     price: 9,
     priceDuration: "mo",
     sumDuration: "month",
-    toggle: false,
+    toggled: false,
   },
 
   {
@@ -20,7 +20,7 @@ export let mPlans = [
     price: 12,
     priceDuration: "mo",
     sumDuration: "month",
-    toggle: false,
+    toggled: false,
   },
 
   {
@@ -30,7 +30,7 @@ export let mPlans = [
     price: 15,
     priceDuration: "mo",
     sumDuration: "month",
-    toggle: false,
+    toggled: false,
   },
 ];
 
@@ -43,6 +43,7 @@ export let yPlans = [
     priceDuration: "yr",
     bonus: "2 months free",
     sumDuration: "year",
+    toggled: false,
   },
 
   {
@@ -53,6 +54,7 @@ export let yPlans = [
     priceDuration: "yr",
     bonus: "2 months free",
     sumDuration: "year",
+    toggled: false,
   },
 
   {
@@ -63,6 +65,7 @@ export let yPlans = [
     priceDuration: "yr",
     bonus: "2 months free",
     sumDuration: "year",
+    toggled: false,
   },
 ];
 
