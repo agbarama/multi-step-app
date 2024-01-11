@@ -2,8 +2,18 @@ import style from "../form/styles/home.module.css";
 import Navbar from "../form/Navbar";
 import styles from "./styles/addons.module.css";
 import AddOnsList from "./AddOnsList";
+import { useNavigate } from "react-router-dom";
 
 const AddOns = () => {
+  const navigate = useNavigate();
+
+  const backButton = () => {
+    navigate("/plan");
+  };
+
+  const nextButton = () => {
+    navigate("/summary");
+  };
   return (
     <div className={style.container}>
       <Navbar />
@@ -13,8 +23,12 @@ const AddOns = () => {
         <p className={styles.p}>Add-ons help ehance your gaming experience.</p>
         <AddOnsList />
 
-        <button className={styles.btnLight}>Go Back</button>
-        <button className={styles.btnDark}>Next</button>
+        <button className={styles.btnLight} onClick={backButton}>
+          Go Back
+        </button>
+        <button className={styles.btnDark} onClick={nextButton}>
+          Next
+        </button>
       </div>
     </div>
   );

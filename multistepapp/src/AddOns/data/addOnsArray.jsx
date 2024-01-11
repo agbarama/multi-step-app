@@ -4,6 +4,7 @@ const addOnsArray = [
     access: "Access to multiple games",
     price: 1,
     duration: "mo",
+    toggled: false,
   },
 
   {
@@ -11,6 +12,7 @@ const addOnsArray = [
     access: "Extra 1TB of cloud save",
     price: 2,
     duration: "mo",
+    toggled: false,
   },
 
   {
@@ -18,6 +20,7 @@ const addOnsArray = [
     access: "Custom theme on your profile",
     price: 2,
     duration: "mo",
+    toggled: false,
   },
 ];
 
