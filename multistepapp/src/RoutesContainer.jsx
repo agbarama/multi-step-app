@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Home from "./form/Home";
-import Contact from "./Contact";
 import Plans from "./plan/Plans";
 import { mPlans } from "./plan/data/plansArray";
+import AddOns from "./AddOns/AddOns";
 
 const RoutesContainer = () => {
   const [plansArray, setPlansArray] = useState(mPlans);
@@ -17,7 +17,7 @@ const RoutesContainer = () => {
             <Plans plansArray={plansArray} setPlansArray={setPlansArray} />
           }
         ></Route>
-        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/ads" element={<AddOns />}></Route>
       </Routes>
     </BrowserRouter>
   );
