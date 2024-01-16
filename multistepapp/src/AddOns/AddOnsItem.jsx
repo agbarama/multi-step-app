@@ -1,55 +1,28 @@
 import { useEffect, useState } from "react";
 import styles from "./styles/addonsitem.module.css";
 
-const AddOnsItem = ({ addOn }) => {
-  const [toggled, setToggled] = useState(false);
+const AddOnsItem = ({ addOn, addOns, ...rest }) => {
   const [isChecked, setIsChecked] = useState(false);
 
-  // summary addOn array to save clicked addOns to localstorage
-  const [summaryAddOn, setSummaryAddOn] = useState(
-    () => JSON.parse(localStorage.getItem("summaryAddOn")) || []
-  );
-
-  // To get saved item on refresh
+  // setting toggle state to true
   useEffect(() => {
-    const savedAddOn = localStorage.getItem("summaryAddOn");
-    if (savedAddOn) {
-      setSummaryAddOn(JSON.parse(savedAddOn));
-    }
-  }, []);
-
-  // function to toggle between checkbox input
-  const handleCheck = () => {
-    setIsChecked(!isChecked);
-  };
-
-  // function to toggle the addon box
-  const handleClick = (clickedAddOn) => {
-    setToggled(!toggled);
-    setIsChecked(!isChecked);
-
-    const newAdOn = { addOnName: clickedAddOn };
-    console.log(newAdOn);
-
-    setSummaryAddOn([...summaryAddOn, newAdOn]);
-    console.log(summaryAddOn);
-  };
-
-  // To save the addOns to localstorage when ever it changes
-  useEffect(() => {
-    localStorage.setItem("summaryAddOn", JSON.stringify(summaryAddOn));
-  }, [summaryAddOn]);
+    setIsChecked(
+      addOns.find((item) => item.name === addOn.name) ? true : false
+    );
+  }, [addOns]);
 
   return (
     <div
-      className={`${styles.box} ${toggled ? styles.toggleBox : ""}`}
-      onClick={() => handleClick(addOn.name)}
+      className={`${styles.box} ${isChecked ? styles.toggleBox : ""}`}
+      {...rest}
     >
       <input
         className={styles.input}
         type="checkbox"
         checked={isChecked}
-        onChange={handleCheck}
+        onChange={() => {
+          rest?.onClick;
+        }}
       />
       <div className={styles.spaceBetween}>
         <div>
