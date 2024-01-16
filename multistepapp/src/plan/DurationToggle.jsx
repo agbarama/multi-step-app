@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles/durationtoggle.module.css";
 import { mPlans, yPlans } from "./data/plansArray";
 
