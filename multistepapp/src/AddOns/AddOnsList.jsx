@@ -1,9 +1,9 @@
 import styles from "./styles/addonslist.module.css";
-import addOnsArray from "./data/addOnsArray";
+// import addOnsArray from "./data/addOnsArray";
 import AddOnsItem from "./AddOnsItem";
 import { useEffect, useState } from "react";
 
-const AddOnsList = () => {
+const AddOnsList = ({ addOnsArray }) => {
   // localstorage state
   const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
   const [addOns, setAddOns] = useState(savedAddOns || []);

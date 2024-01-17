@@ -9,6 +9,7 @@ const DurationToggle = ({
   setDisplayToggleBonus,
 }) => {
   const [toggled, setToggled] = useState(false);
+  const [durationToggle, setDurationToggle] = useState(false);
   const [toggledDuration, setToggledDuration] = useState(false);
 
   let activeSwitch = localStorage.getItem("activeS");

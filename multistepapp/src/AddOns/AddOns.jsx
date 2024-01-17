@@ -4,7 +4,7 @@ import styles from "./styles/addons.module.css";
 import AddOnsList from "./AddOnsList";
 import { useNavigate } from "react-router-dom";
 
-const AddOns = () => {
+const AddOns = ({ addOnsArray }) => {
   const navigate = useNavigate();
 
   const backButton = () => {
@@ -21,7 +21,7 @@ const AddOns = () => {
       <div className={styles.addOns}>
         <h1 className={styles.h1}>Pick add-ons</h1>
         <p className={styles.p}>Add-ons help ehance your gaming experience.</p>
-        <AddOnsList />
+        <AddOnsList addOnsArray={addOnsArray} />
 
         <button className={styles.btnLight} onClick={backButton}>
           Go Back
