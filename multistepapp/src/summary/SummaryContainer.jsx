@@ -1,6 +1,6 @@
 import styles from "./styles/summarycontainer.module.css";
 import SelectedPlanList from "./SelectedPlanList";
-import SelectedAddOns from "./SelectedAddOns";
+import SelectedAddOnsList from "./SelectedAddOnsList";
 
 const SummaryContainer = () => {
   const savedPlans = JSON.parse(localStorage.getItem("summaryPlan"));
@@ -12,11 +12,9 @@ const SummaryContainer = () => {
         <p className={styles.p}>
           Double-check everything look Ok before confirming.
         </p>
-        {/* <div className={styles.selectedPlan}></div> */}
         <SelectedPlanList savedPlans={savedPlans} />
         <div className={styles.border}></div>
-        {/* <div className={styles.jsAddOns}></div> */}
-        <SelectedAddOns />
+        <SelectedAddOnsList />
 
         <div className={styles.total}>
           <p className={styles.sum}></p>

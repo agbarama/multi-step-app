@@ -23,4 +23,9 @@
     /* color: $cool-gray; */
     margin-bottom: 40px;
   }
+
+  .border {
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+  }
 }
