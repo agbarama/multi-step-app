@@ -1,8 +1,6 @@
 import SelectedAddOnsItem from "./SelectedAddOnsItem";
 
-const SelectedAddOnsList = () => {
-  const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
-
+const SelectedAddOnsList = ({ savedAddOns }) => {
   return (
     <div>
       {savedAddOns.map((addOn, i) => (
