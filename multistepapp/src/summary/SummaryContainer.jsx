@@ -1,10 +1,16 @@
 import styles from "./styles/summarycontainer.module.css";
 import SelectedPlanList from "./SelectedPlanList";
 import SelectedAddOnsList from "./SelectedAddOnsList";
+import { useNavigate } from "react-router-dom";
 
 const SummaryContainer = () => {
   const savedPlans = JSON.parse(localStorage.getItem("summaryPlan"));
-  console.log(savedPlans);
+  const navigate = useNavigate();
+  const backButton = () => {
+    navigate("/ads");
+  };
+
+  const submitButton = () => {};
   return (
     <div className={styles.summaryContainer}>
       <div className={styles.summary}>
@@ -21,8 +27,12 @@ const SummaryContainer = () => {
           <p className={styles.totalPrice}>/mo</p>
         </div>
 
-        <button className={styles.btnLight}>Go Back</button>
-        <button className={styles.confirmBtn}>Confirm</button>
+        <button className={styles.btnLight} onClick={backButton}>
+          Go Back
+        </button>
+        <button className={styles.confirmBtn} onClick={submitButton}>
+          Confirm
+        </button>
       </div>
     </div>
   );
