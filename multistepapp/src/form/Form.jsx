@@ -111,7 +111,7 @@ const Form = () => {
             id="name"
             name="name"
             placeholder="e.g. Stephen King"
-            value={name}
+            value={name || ""}
             onChange={(e) => setName(e.target.value)}
           />
 
@@ -125,7 +125,8 @@ const Form = () => {
             id="email"
             name="email"
             placeholder="e.g. stephenking@lorem.com"
-            value={email}
+            // setting an empty state to empty string rather than null
+            value={email || ""}
             onChange={(e) => setEmail(e.target.value)}
           />
 
@@ -139,7 +140,7 @@ const Form = () => {
             id="phone"
             name="phone"
             placeholder="e.g. +1 234 567 890"
-            value={number}
+            value={number || ""}
             onChange={(e) => setNumber(e.target.value)}
           />
 
