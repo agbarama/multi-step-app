@@ -1,0 +1,27 @@
+.selectedPlan {
+  /* // margin: 0 20px;
+  // border-bottom: 1px solid #ccc; */
+  .div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* // column-gap: 220px; */
+    height: 20px;
+
+    .duration {
+      color: hsl(213, 96%, 18%);
+      /* color: $marine-blue; */
+      margin: 0;
+    }
+
+    .price {
+      font-size: 12px;
+      color: hsl(213, 96%, 18%);
+      /* color: $marine-blue; */
+    }
+  }
+
+  .review {
+    margin: 0;
+  }
+}
