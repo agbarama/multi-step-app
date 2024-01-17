@@ -9,3 +9,11 @@
   border-radius: 10px;
   width: 780px;
 }
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+}

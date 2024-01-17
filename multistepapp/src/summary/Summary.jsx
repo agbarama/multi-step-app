@@ -9,8 +9,12 @@ const Summary = ({ plansArray }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <SummaryContainer plansArray={plansArray} />
-      <SubmitContainer />
+      <SummaryContainer
+        plansArray={plansArray}
+        submit={submit}
+        setSubmit={setSubmit}
+      />
+      <SubmitContainer submit={submit} setSubmit={setSubmit} />
     </div>
   );
 };

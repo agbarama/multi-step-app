@@ -53,3 +53,7 @@
     cursor: pointer;
   }
 }
+
+.hide {
+  display: none;
+}

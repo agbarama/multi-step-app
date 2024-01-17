@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import SumTotal from "./SumTotal";
 import { useEffect, useState } from "react";
 
-const SummaryContainer = ({ plansArray }) => {
+const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
   const savedPlans = JSON.parse(localStorage.getItem("summaryPlan"));
   const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
 
@@ -36,9 +36,13 @@ const SummaryContainer = ({ plansArray }) => {
     navigate("/ads");
   };
 
-  const submitButton = () => {};
+  const submitButton = () => {
+    setInterval(() => {
+      setSubmit(true);
+    }, 1000);
+  };
   return (
-    <div className={styles.summaryContainer}>
+    <div className={`${styles.summaryContainer}  ${submit ? styles.hide : ""}`}>
       <div className={styles.summary}>
         <h1 className={styles.h}>Finishing up</h1>
         <p className={styles.p}>

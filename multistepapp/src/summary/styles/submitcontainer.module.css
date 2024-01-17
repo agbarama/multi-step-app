@@ -1,0 +1,40 @@
+.submitPage {
+  position: relative;
+  top: 120px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+  margin-right: 40px;
+  font-size: 14px;
+  padding: 0 10px;
+  margin: 30px 20px;
+
+  .submitIcon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 35px;
+  }
+
+  h1 {
+    color: hsl(213, 96%, 18%);
+    /* color: $marine-blue; */
+  }
+
+  p {
+    /* color: $cool-gray; */
+    color: hsl(231, 11%, 63%);
+    line-height: 25px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+}
