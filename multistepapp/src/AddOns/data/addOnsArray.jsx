@@ -1,4 +1,4 @@
-const addOnsArray = [
+export const monAddOnsArray = [
   {
     name: "Online service",
     access: "Access to multiple games",
@@ -24,4 +24,28 @@ const addOnsArray = [
   },
 ];
 
-export default addOnsArray;
+export const yearlyAddOnsArray = [
+  {
+    name: "Online service",
+    access: "Access to multiple games",
+    price: 10,
+    duration: "yr",
+    toggled: false,
+  },
+
+  {
+    name: "Larger storage",
+    access: "Extra 1TB of cloud save",
+    price: 20,
+    duration: "yr",
+    toggled: false,
+  },
+
+  {
+    name: "Customizable profile",
+    access: "Custom theme on your profile",
+    price: 20,
+    duration: "yr",
+    toggled: false,
+  },
+];
