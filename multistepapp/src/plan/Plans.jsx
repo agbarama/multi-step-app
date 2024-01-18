@@ -7,6 +7,12 @@ import DurationToggle from "./DurationToggle";
 import { useNavigate } from "react-router-dom";
 
 const Plans = ({ plansArray, setPlansArray }) => {
+  // Page indicator
+  const [togglePage1, setTogglePage1] = useState(false);
+  const [togglePage2, setTogglePage2] = useState(true);
+  const [togglePage3, setTogglePage3] = useState(false);
+  const [togglePage4, setTogglePage4] = useState(false);
+
   const [displayToggleBonus, setDisplayToggleBonus] = useState(false);
   const navigate = useNavigate();
 
@@ -19,7 +25,12 @@ const Plans = ({ plansArray, setPlansArray }) => {
   };
   return (
     <div className={style.container}>
-      <Navbar />
+      <Navbar
+        togglePage1={togglePage1}
+        togglePage2={togglePage2}
+        togglePage3={togglePage3}
+        togglePage4={togglePage4}
+      />
       <div className={styles.plan}>
         <h1>Select your plan</h1>
         <p className={styles.p}>
