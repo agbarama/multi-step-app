@@ -68,3 +68,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .durationSwitch {
+    width: 300px;
+  }
+}

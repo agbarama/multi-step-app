@@ -47,3 +47,73 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .btnLight {
+    display: none;
+  }
+
+  .btnDark {
+    display: none;
+  }
+
+  .plan {
+    width: 250px;
+    margin-top: 50px;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    margin: 20px 10px;
+    color: hsl(213, 96%, 18%);
+
+    /* color: $marine-blue; */
+
+    /* // width: 280px;
+    // margin-top: 30px;
+    // margin-right: 0;
+    // margin-left: 0;
+    // margin: 20px 10px; */
+    h1 {
+      width: 240px;
+      margin-top: 15px;
+    }
+
+    .p {
+      font-size: 15px;
+      line-height: 22px;
+      /* // margin-bottom: 20px; */
+    }
+
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      margin-bottom: 20px;
+
+      .box {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 250px;
+        padding: 20px 10px;
+        padding-right: 50px;
+        border-radius: 10px;
+
+        .icons {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .durationSwitch {
+      width: 300px;
+    }
+
+    .desk-btn {
+      display: none;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../form/Navbar";
+import MobileHeader from "../form/MobileHeader";
+import MobileButton from "../form/MobileButton";
 import style from "../form/styles/home.module.css";
 import styles from "./styles/plans.module.css";
 import PlanList from "./PlanList";
@@ -25,6 +27,7 @@ const Plans = ({ plansArray, setPlansArray }) => {
   };
   return (
     <div className={style.container}>
+      <MobileHeader />
       <Navbar
         togglePage1={togglePage1}
         togglePage2={togglePage2}
@@ -54,6 +57,7 @@ const Plans = ({ plansArray, setPlansArray }) => {
         <button onClick={nextButton} className={styles.btnDark}>
           Next
         </button>
+        <MobileButton />
       </div>
     </div>
   );
