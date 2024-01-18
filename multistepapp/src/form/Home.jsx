@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      {/* <MobileHeader /> */}
+      <MobileHeader />
       <Navbar
         togglePage1={togglePage1}
         togglePage2={togglePage2}

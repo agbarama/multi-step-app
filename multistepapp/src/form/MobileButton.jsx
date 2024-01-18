@@ -4,7 +4,7 @@ const MobileButton = () => {
   return (
     <div>
       <div className={styles.mobileButtons}>
-        <button className={styles.mobNextBtn}>Next</button>
+        <button className={styles.nextBtn}>Next</button>
       </div>
     </div>
   );
