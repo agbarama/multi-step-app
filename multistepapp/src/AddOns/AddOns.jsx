@@ -1,6 +1,8 @@
 import { useState } from "react";
 import style from "../form/styles/home.module.css";
 import Navbar from "../form/Navbar";
+import MobileHeader from "../form/MobileHeader";
+import MobileButton from "../form/MobileButton";
 import styles from "./styles/addons.module.css";
 import AddOnsList from "./AddOnsList";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +25,7 @@ const AddOns = ({ addOnsArray }) => {
   };
   return (
     <div className={style.container}>
+      <MobileHeader />
       <Navbar
         togglePage1={togglePage1}
         togglePage2={togglePage2}
@@ -41,6 +44,7 @@ const AddOns = ({ addOnsArray }) => {
         <button className={styles.btnDark} onClick={nextButton}>
           Next
         </button>
+        <MobileButton />
       </div>
     </div>
   );

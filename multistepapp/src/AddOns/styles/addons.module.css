@@ -46,3 +46,35 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .btnLight {
+    display: none;
+  }
+
+  .btnDark {
+    display: none;
+  }
+
+  .add-ons {
+    width: 250px;
+    margin-top: 50px;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    margin: 20px 10px;
+    color: hsl(213, 96%, 18%);
+    /* color: $marine-blue; */
+
+    h1 {
+      margin-top: 15px;
+    }
+
+    .p {
+      font-size: 15px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+  }
+}

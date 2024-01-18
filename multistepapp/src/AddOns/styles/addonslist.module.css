@@ -3,3 +3,9 @@
   flex-direction: column;
   row-gap: 15px;
 }
+
+@media only screen and (max-width: 375px) {
+  .boxes {
+    font-size: 35px;
+  }
+}
