@@ -60,6 +60,8 @@
 
 @media only screen and (max-width: 375px) {
   .summaryContainer {
+    position: relative;
+    z-index: 4;
     width: 300px;
     margin-top: 50px;
     margin-right: 0;

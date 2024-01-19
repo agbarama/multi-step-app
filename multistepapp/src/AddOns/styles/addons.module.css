@@ -1,3 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: 255px 1fr;
+  column-gap: 40px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  /* background-color: $white; */
+  /* color: $white; */
+  border-radius: 10px;
+  width: 780px;
+}
+
 .addOns {
   width: 450px;
   margin-top: 60px;
@@ -54,6 +66,18 @@
 
   .btnDark {
     display: none;
+  }
+
+  .container {
+    position: relative;
+    top: 70px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 420px;
+    margin-top: 30px;
   }
 
   .addOns {

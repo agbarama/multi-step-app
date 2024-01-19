@@ -27,7 +27,7 @@ const AddOns = ({ addOnsArray }) => {
     navigate("/summary");
   };
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       <MobileHeader />
       <Navbar
         togglePage1={togglePage1}

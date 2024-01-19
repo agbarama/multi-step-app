@@ -29,7 +29,7 @@ const Plans = ({ plansArray, setPlansArray }) => {
     navigate("/ads");
   };
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       <MobileHeader />
       <Navbar
         togglePage1={togglePage1}

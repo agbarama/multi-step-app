@@ -7,13 +7,13 @@
   .mobileHeaderContainer {
     display: block;
     position: fixed;
-    /* z-index: 2; */
     /* left: 85px; */
     /* top: -160px; */
     /* z-index: 3; */
 
     .mobBg {
       position: fixed;
+      z-index: 1;
       top: 0;
       left: 0;
       display: block;
@@ -22,11 +22,11 @@
     }
 
     .mobileHeader {
-      /* display: block; */
+      display: block;
       position: relative;
       left: 85px;
       top: -140px;
-      z-index: 1;
+      z-index: 3;
 
       .indicator {
         /* position: relative; */
