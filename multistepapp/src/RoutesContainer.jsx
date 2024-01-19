@@ -10,6 +10,7 @@ import { monAddOnsArray, yearlyAddOnsArray } from "./AddOns/data/addOnsArray";
 const RoutesContainer = () => {
   const [plansArray, setPlansArray] = useState(mPlans);
   const [addOnsArray, setAddOnsArray] = useState(monAddOnsArray);
+  const [toggleDuration, setToggleDuration] = useState(false);
 
   // useEffect(() => {
   //   // Set the location to the home page on component mount
@@ -18,6 +19,10 @@ const RoutesContainer = () => {
 
   useEffect(() => {
     setAddOnsArray(plansArray === yPlans ? yearlyAddOnsArray : monAddOnsArray);
+  }, [plansArray]);
+
+  useEffect(() => {
+    setToggleDuration(plansArray === yPlans ? true : false);
   }, [plansArray]);
 
   return (
@@ -36,7 +41,9 @@ const RoutesContainer = () => {
         ></Route>
         <Route
           path="/summary"
-          element={<Summary plansArray={plansArray} />}
+          element={
+            <Summary plansArray={plansArray} toggleDuration={toggleDuration} />
+          }
         ></Route>
       </Routes>
     </BrowserRouter>

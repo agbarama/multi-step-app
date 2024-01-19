@@ -6,7 +6,12 @@ import { useNavigate } from "react-router-dom";
 import SumTotal from "./SumTotal";
 import { useEffect, useState } from "react";
 
-const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
+const SummaryContainer = ({
+  plansArray,
+  toggleDuration,
+  submit,
+  setSubmit,
+}) => {
   const savedPlans = JSON.parse(localStorage.getItem("summaryPlan"));
   const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
 
@@ -73,7 +78,11 @@ const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
         <SelectedPlanList savedPlans={savedPlans} />
         <div className={styles.border}></div>
         <SelectedAddOnsList savedAddOns={savedAddOns} />
-        <SumTotal plansArray={plansArray} sumTotal={sumTotal} />
+        <SumTotal
+          plansArray={plansArray}
+          toggleDuration={toggleDuration}
+          sumTotal={sumTotal}
+        />
         <button className={styles.btnLight} onClick={back}>
           Go Back
         </button>

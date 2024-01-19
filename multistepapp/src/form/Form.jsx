@@ -102,7 +102,9 @@ const Form = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className={styles.err}>
-            <label className={styles.name}>Name</label>
+            <label className={styles.name} htmlFor="name">
+              Name
+            </label>
             <div className={styles.errorMessage}>{nameErr}</div>
           </div>
           <input
@@ -111,12 +113,15 @@ const Form = () => {
             id="name"
             name="name"
             placeholder="e.g. Stephen King"
+            autoComplete="name"
             value={name || ""}
             onChange={(e) => setName(e.target.value)}
           />
 
           <div className={styles.err}>
-            <label className={styles.email}>Email Address</label>
+            <label className={styles.email} htmlFor="email">
+              Email Address
+            </label>
             <div className={styles.errorMessage}>{emailErr}</div>
           </div>
           <input
@@ -125,13 +130,16 @@ const Form = () => {
             id="email"
             name="email"
             placeholder="e.g. stephenking@lorem.com"
+            autoComplete="email"
             // setting an empty state to empty string rather than null
             value={email || ""}
             onChange={(e) => setEmail(e.target.value)}
           />
 
           <div className={styles.err}>
-            <label className={styles.phone}>Phone Number</label>
+            <label className={styles.phone} htmlFor="phone">
+              Phone Number
+            </label>
             <div className={styles.errorMessage}>{phoneErr}</div>
           </div>
           <input
@@ -140,6 +148,7 @@ const Form = () => {
             id="phone"
             name="phone"
             placeholder="e.g. +1 234 567 890"
+            autoComplete="phone"
             value={number || ""}
             onChange={(e) => setNumber(e.target.value)}
           />
