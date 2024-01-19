@@ -57,3 +57,29 @@
 .hide {
   display: none;
 }
+
+@media only screen and (max-width: 375px) {
+  .summaryContainer {
+    width: 300px;
+    margin-top: 50px;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    margin: 20px 10px;
+    /* color: $marine-blue; */
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .desk-btn {
+      display: none;
+    }
+  }
+}

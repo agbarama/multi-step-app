@@ -11,6 +11,11 @@ const RoutesContainer = () => {
   const [plansArray, setPlansArray] = useState(mPlans);
   const [addOnsArray, setAddOnsArray] = useState(monAddOnsArray);
 
+  // useEffect(() => {
+  //   // Set the location to the home page on component mount
+  //   window.location.pathname === "/" || (window.location.href = "/");
+  // }, []);
+
   useEffect(() => {
     setAddOnsArray(plansArray === yPlans ? yearlyAddOnsArray : monAddOnsArray);
   }, [plansArray]);

@@ -1,3 +1,5 @@
+import MobileHeader from "../form/MobileHeader";
+import MobileButton from "../form/MobileButton";
 import { useState } from "react";
 import Navbar from "../form/Navbar";
 import styles from "./styles/summary.module.css";
@@ -14,18 +16,29 @@ const Summary = ({ plansArray }) => {
   const [submit, setSubmit] = useState(false);
   return (
     <div className={styles.container}>
+      <MobileHeader />
       <Navbar
         togglePage1={togglePage1}
         togglePage2={togglePage2}
         togglePage3={togglePage3}
         togglePage4={togglePage4}
       />
-      <SummaryContainer
-        plansArray={plansArray}
-        submit={submit}
-        setSubmit={setSubmit}
-      />
-      <SubmitContainer submit={submit} setSubmit={setSubmit} />
+      {!submit ? (
+        <SummaryContainer
+          plansArray={plansArray}
+          submit={submit}
+          setSubmit={setSubmit}
+        />
+      ) : (
+        <SubmitContainer submit={submit} setSubmit={setSubmit} />
+      )}
+      {/* <SummaryContainer
+         plansArray={plansArray}
+         submit={submit}
+         setSubmit={setSubmit}
+      /> */}
+      <MobileButton />
+      {/* <SubmitContainer submit={submit} setSubmit={setSubmit} /> */}
     </div>
   );
 };

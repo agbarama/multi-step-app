@@ -9,20 +9,28 @@ import DurationToggle from "./DurationToggle";
 import { useNavigate } from "react-router-dom";
 
 const Plans = ({ plansArray, setPlansArray }) => {
-  // Page indicator
+  // Page indicators
   const [togglePage1, setTogglePage1] = useState(false);
   const [togglePage2, setTogglePage2] = useState(true);
   const [togglePage3, setTogglePage3] = useState(false);
   const [togglePage4, setTogglePage4] = useState(false);
 
+  // Mobile buttons
+  const [formButton, setFormButton] = useState(false);
+  const [backButton, setBackButton] = useState(true);
+  const [nextButton, setNextButton] = useState(true);
+  const [addOnBackButton, setAddOnBackButton] = useState(false);
+  const [addOnNextButton, setAddonNextButton] = useState(false);
+  const [confirmButton, setConfirmButton] = useState(false);
+
   const [displayToggleBonus, setDisplayToggleBonus] = useState(false);
   const navigate = useNavigate();
 
-  const backButton = () => {
+  const back = () => {
     navigate("/");
   };
 
-  const nextButton = () => {
+  const next = () => {
     navigate("/ads");
   };
   return (
@@ -51,13 +59,22 @@ const Plans = ({ plansArray, setPlansArray }) => {
           setDisplayToggleBonus={setDisplayToggleBonus}
         />
 
-        <button onClick={backButton} className={styles.btnLight}>
+        <button onClick={back} className={styles.btnLight}>
           Go Back
         </button>
-        <button onClick={nextButton} className={styles.btnDark}>
+        <button onClick={next} className={styles.btnDark}>
           Next
         </button>
-        <MobileButton />
+        <MobileButton
+          formButton={formButton}
+          backButton={backButton}
+          nextButton={nextButton}
+          addOnBackButton={addOnBackButton}
+          addOnBackNextButton={addOnNextButton}
+          confirmButton={confirmButton}
+          planBack={back}
+          planNext={next}
+        />
       </div>
     </div>
   );

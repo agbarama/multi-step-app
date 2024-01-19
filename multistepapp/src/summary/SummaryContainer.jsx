@@ -10,6 +10,23 @@ const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
   const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
 
   const [sumTotal, setSumTotal] = useState();
+  // if (submit) {
+  //   // map through the saved arrays and created an array with only prices
+  //   const addOnPrices = savedAddOns.map((addOn) => addOn.price);
+  //   const planPrice = savedPlans.map((plan) => plan.price);
+
+  //   // Total addOns
+  //   const addOnSum = addOnPrices.reduce(
+  //     (acc, currentPrice) => acc + currentPrice,
+  //     0
+  //   );
+
+  //   // Total plan
+  //   const planSum = planPrice.reduce(
+  //     (acc, currentPrice) => acc + currentPrice,
+  //     0
+  //   );
+  // }
 
   // map through the saved arrays and created an array with only prices
   const addOnPrices = savedAddOns.map((addOn) => addOn.price);
@@ -39,6 +56,7 @@ const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
   const submitButton = () => {
     setInterval(() => {
       setSubmit(true);
+      localStorage.clear();
     }, 1000);
   };
   return (
@@ -52,7 +70,6 @@ const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
         <div className={styles.border}></div>
         <SelectedAddOnsList savedAddOns={savedAddOns} />
         <SumTotal plansArray={plansArray} sumTotal={sumTotal} />
-
         <button className={styles.btnLight} onClick={backButton}>
           Go Back
         </button>

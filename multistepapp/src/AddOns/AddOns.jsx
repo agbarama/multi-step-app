@@ -8,19 +8,27 @@ import AddOnsList from "./AddOnsList";
 import { useNavigate } from "react-router-dom";
 
 const AddOns = ({ addOnsArray }) => {
-  // Page indicator
+  // Page indicators
   const [togglePage1, setTogglePage1] = useState(false);
   const [togglePage2, setTogglePage2] = useState(false);
   const [togglePage3, setTogglePage3] = useState(true);
   const [togglePage4, setTogglePage4] = useState(false);
 
+  // Mobile buttons
+  const [formButton, setFormButton] = useState(false);
+  const [backButton, setBackButton] = useState(false);
+  const [nextButton, setNextButton] = useState(false);
+  const [addOnBackButton, setAddOnBackButton] = useState(true);
+  const [addOnNextButton, setAddonNextButton] = useState(true);
+  const [confirmButton, setConfirmButton] = useState(false);
+
   const navigate = useNavigate();
 
-  const backButton = () => {
+  const back = () => {
     navigate("/plan");
   };
 
-  const nextButton = () => {
+  const next = () => {
     navigate("/summary");
   };
   return (
@@ -38,13 +46,22 @@ const AddOns = ({ addOnsArray }) => {
         <p className={styles.p}>Add-ons help ehance your gaming experience.</p>
         <AddOnsList addOnsArray={addOnsArray} />
 
-        <button className={styles.btnLight} onClick={backButton}>
+        <button className={styles.btnLight} onClick={back}>
           Go Back
         </button>
-        <button className={styles.btnDark} onClick={nextButton}>
+        <button className={styles.btnDark} onClick={next}>
           Next
         </button>
-        <MobileButton />
+        <MobileButton
+          formButton={formButton}
+          backButton={backButton}
+          nextButton={nextButton}
+          addOnBackButton={addOnBackButton}
+          addOnBackNextButton={addOnNextButton}
+          confirmButton={confirmButton}
+          addOnBack={back}
+          addOnNext={next}
+        />
       </div>
     </div>
   );
