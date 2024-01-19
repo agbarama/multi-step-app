@@ -2,15 +2,15 @@ import styles from "./styles/mobilebutton.module.css";
 
 const MobileButton = ({
   formButton,
-  backButton,
-  nextButton,
-  addOnBackButton,
-  addOnNextButton,
-  confirmButton,
+  plansButton,
+  addOnButton,
+  summaryButton,
   planBack,
   planNext,
   addOnBack,
   addOnNext,
+  sumBack,
+  submit,
 }) => {
   return (
     <div>
@@ -18,31 +18,46 @@ const MobileButton = ({
         <button className={formButton ? styles.nextBtn : styles.hideButton}>
           Next
         </button>
+
+        {/* Plans Buttons */}
         <button
-          className={backButton ? styles.btnLight : styles.hideButton}
+          className={plansButton ? styles.btnLight : styles.hideButton}
           onClick={planBack}
         >
           Back
         </button>
         <button
-          className={nextButton ? styles.btnDark : styles.hideButton}
+          className={plansButton ? styles.btnDark : styles.hideButton}
           onClick={planNext}
         >
           Next
         </button>
+
+        {/* AddOns Buttons */}
         <button
-          className={addOnBackButton ? styles.btnLight : styles.hideButton}
+          className={addOnButton ? styles.btnLight : styles.hideButton}
           onClick={addOnBack}
         >
           Back
         </button>
         <button
-          className={addOnBackButton ? styles.btnDark : styles.hideButton}
+          className={addOnButton ? styles.btnDark : styles.hideButton}
           onClick={addOnNext}
         >
           Next
         </button>
-        <button className={confirmButton ? styles.sumBtn : styles.hideButton}>
+
+        {/* Summary Buttons */}
+        <button
+          className={summaryButton ? styles.btnLight : styles.hideButton}
+          onClick={sumBack}
+        >
+          Back
+        </button>
+        <button
+          className={summaryButton ? styles.sumBtn : styles.hideButton}
+          onClick={submit}
+        >
           Confirm
         </button>
       </div>

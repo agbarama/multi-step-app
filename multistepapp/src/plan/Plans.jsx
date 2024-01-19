@@ -15,13 +15,8 @@ const Plans = ({ plansArray, setPlansArray }) => {
   const [togglePage3, setTogglePage3] = useState(false);
   const [togglePage4, setTogglePage4] = useState(false);
 
-  // Mobile buttons
-  const [formButton, setFormButton] = useState(false);
-  const [backButton, setBackButton] = useState(true);
-  const [nextButton, setNextButton] = useState(true);
-  const [addOnBackButton, setAddOnBackButton] = useState(false);
-  const [addOnNextButton, setAddonNextButton] = useState(false);
-  const [confirmButton, setConfirmButton] = useState(false);
+  // Display mobile button
+  const [plansButton, setPlansButton] = useState(true);
 
   const [displayToggleBonus, setDisplayToggleBonus] = useState(false);
   const navigate = useNavigate();
@@ -66,12 +61,7 @@ const Plans = ({ plansArray, setPlansArray }) => {
           Next
         </button>
         <MobileButton
-          formButton={formButton}
-          backButton={backButton}
-          nextButton={nextButton}
-          addOnBackButton={addOnBackButton}
-          addOnBackNextButton={addOnNextButton}
-          confirmButton={confirmButton}
+          plansButton={plansButton}
           planBack={back}
           planNext={next}
         />

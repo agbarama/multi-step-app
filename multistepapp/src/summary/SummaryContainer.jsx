@@ -1,4 +1,5 @@
 import styles from "./styles/summarycontainer.module.css";
+import MobileButton from "../form/MobileButton";
 import SelectedPlanList from "./SelectedPlanList";
 import SelectedAddOnsList from "./SelectedAddOnsList";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,9 @@ import { useEffect, useState } from "react";
 const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
   const savedPlans = JSON.parse(localStorage.getItem("summaryPlan"));
   const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
+
+  // Display mobile button
+  const [summaryButton, setSummaryButton] = useState(true);
 
   const [sumTotal, setSumTotal] = useState();
   // if (submit) {
@@ -49,7 +53,7 @@ const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
   }, []);
 
   const navigate = useNavigate();
-  const backButton = () => {
+  const back = () => {
     navigate("/ads");
   };
 
@@ -70,12 +74,17 @@ const SummaryContainer = ({ plansArray, submit, setSubmit }) => {
         <div className={styles.border}></div>
         <SelectedAddOnsList savedAddOns={savedAddOns} />
         <SumTotal plansArray={plansArray} sumTotal={sumTotal} />
-        <button className={styles.btnLight} onClick={backButton}>
+        <button className={styles.btnLight} onClick={back}>
           Go Back
         </button>
         <button className={styles.confirmBtn} onClick={submitButton}>
           Confirm
         </button>
+        <MobileButton
+          summaryButton={summaryButton}
+          sumBack={back}
+          submit={submitButton}
+        />
       </div>
     </div>
   );

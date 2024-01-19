@@ -14,13 +14,8 @@ const AddOns = ({ addOnsArray }) => {
   const [togglePage3, setTogglePage3] = useState(true);
   const [togglePage4, setTogglePage4] = useState(false);
 
-  // Mobile buttons
-  const [formButton, setFormButton] = useState(false);
-  const [backButton, setBackButton] = useState(false);
-  const [nextButton, setNextButton] = useState(false);
-  const [addOnBackButton, setAddOnBackButton] = useState(true);
-  const [addOnNextButton, setAddonNextButton] = useState(true);
-  const [confirmButton, setConfirmButton] = useState(false);
+  // Display mobile button
+  const [addOnButton, setAddOnButton] = useState(true);
 
   const navigate = useNavigate();
 
@@ -53,12 +48,7 @@ const AddOns = ({ addOnsArray }) => {
           Next
         </button>
         <MobileButton
-          formButton={formButton}
-          backButton={backButton}
-          nextButton={nextButton}
-          addOnBackButton={addOnBackButton}
-          addOnBackNextButton={addOnNextButton}
-          confirmButton={confirmButton}
+          addOnButton={addOnButton}
           addOnBack={back}
           addOnNext={next}
         />

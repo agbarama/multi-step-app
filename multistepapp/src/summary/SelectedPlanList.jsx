@@ -1,5 +1,4 @@
 import SelectedPlanItem from "./SelectedPlanItem";
-import styles from "./styles/summaryplans.module.css";
 
 const SelectedPlanList = ({ savedPlans }) => {
   return (
