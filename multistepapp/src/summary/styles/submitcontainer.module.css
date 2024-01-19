@@ -38,3 +38,33 @@
 .display {
   display: block;
 }
+
+@media only screen and (max-width: 375px) {
+  .submitPage {
+    top: 10px;
+    width: 300px;
+    margin-top: 60px;
+    /* // margin-right: 40px; */
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 30px 35x;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    .submitIcon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 35px;
+    }
+
+    /* h1 {
+       color: $marine-blue; 
+   } */
+
+    p {
+      font-size: 16px;
+      /* color: $cool-gray; */
+      line-height: 25px;
+    }
+  }
+}

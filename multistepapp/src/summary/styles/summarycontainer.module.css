@@ -82,4 +82,11 @@
       display: none;
     }
   }
+
+  .btnLight {
+    display: none;
+  }
+  .confirmBtn {
+    display: none;
+  }
 }

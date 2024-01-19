@@ -37,7 +37,7 @@ const Summary = ({ plansArray }) => {
          submit={submit}
          setSubmit={setSubmit}
       /> */}
-      <MobileButton />
+      {/* <MobileButton /> */}
       {/* <SubmitContainer submit={submit} setSubmit={setSubmit} /> */}
     </div>
   );
