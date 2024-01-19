@@ -6,11 +6,8 @@ import Form from "./Form";
 import MobileButton from "./MobileButton";
 
 const Home = () => {
-  // Page indicators
+  // Page indicator
   const [togglePage1, setTogglePage1] = useState(true);
-  const [togglePage2, setTogglePage2] = useState(false);
-  const [togglePage3, setTogglePage3] = useState(false);
-  const [togglePage4, setTogglePage4] = useState(false);
 
   // Mobile buttons
   const [formButton, setFormButton] = useState(true);
@@ -22,13 +19,8 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <MobileHeader />
-      <Navbar
-        togglePage1={togglePage1}
-        togglePage2={togglePage2}
-        togglePage3={togglePage3}
-        togglePage4={togglePage4}
-      />
+      <MobileHeader togglePage1={togglePage1} />
+      <Navbar togglePage1={togglePage1} />
       <Form />
       <MobileButton
         formButton={formButton}

@@ -8,11 +8,8 @@ import AddOnsList from "./AddOnsList";
 import { useNavigate } from "react-router-dom";
 
 const AddOns = ({ addOnsArray }) => {
-  // Page indicators
-  const [togglePage1, setTogglePage1] = useState(false);
-  const [togglePage2, setTogglePage2] = useState(false);
+  // Page indicator
   const [togglePage3, setTogglePage3] = useState(true);
-  const [togglePage4, setTogglePage4] = useState(false);
 
   // Display mobile button
   const [addOnButton, setAddOnButton] = useState(true);
@@ -28,13 +25,8 @@ const AddOns = ({ addOnsArray }) => {
   };
   return (
     <div className={styles.container}>
-      <MobileHeader />
-      <Navbar
-        togglePage1={togglePage1}
-        togglePage2={togglePage2}
-        togglePage3={togglePage3}
-        togglePage4={togglePage4}
-      />
+      <MobileHeader togglePage3={togglePage3} />
+      <Navbar togglePage3={togglePage3} />
 
       <div className={styles.addOns}>
         <h1 className={styles.h1}>Pick add-ons</h1>

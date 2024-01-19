@@ -10,10 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Plans = ({ plansArray, setPlansArray }) => {
   // Page indicators
-  const [togglePage1, setTogglePage1] = useState(false);
   const [togglePage2, setTogglePage2] = useState(true);
-  const [togglePage3, setTogglePage3] = useState(false);
-  const [togglePage4, setTogglePage4] = useState(false);
 
   // Display mobile button
   const [plansButton, setPlansButton] = useState(true);
@@ -30,13 +27,8 @@ const Plans = ({ plansArray, setPlansArray }) => {
   };
   return (
     <div className={styles.container}>
-      <MobileHeader />
-      <Navbar
-        togglePage1={togglePage1}
-        togglePage2={togglePage2}
-        togglePage3={togglePage3}
-        togglePage4={togglePage4}
-      />
+      <MobileHeader togglePage2={togglePage2} />
+      <Navbar togglePage2={togglePage2} />
       <div className={styles.plan}>
         <h1>Select your plan</h1>
         <p className={styles.p}>
