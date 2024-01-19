@@ -37,7 +37,7 @@ const AddOns = ({ addOnsArray }) => {
           Go Back
         </button>
         <button className={styles.btnDark} onClick={next}>
-          Next
+          Next Step
         </button>
         <MobileButton
           addOnButton={addOnButton}

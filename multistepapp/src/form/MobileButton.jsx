@@ -16,7 +16,7 @@ const MobileButton = ({
     <div>
       <div className={styles.mobileButtons}>
         <button className={formButton ? styles.nextBtn : styles.hideButton}>
-          Next
+          Next Step
         </button>
 
         {/* Plans Buttons */}
@@ -24,13 +24,13 @@ const MobileButton = ({
           className={plansButton ? styles.btnLight : styles.hideButton}
           onClick={planBack}
         >
-          Back
+          Go Back
         </button>
         <button
           className={plansButton ? styles.btnDark : styles.hideButton}
           onClick={planNext}
         >
-          Next
+          Next Step
         </button>
 
         {/* AddOns Buttons */}
@@ -38,13 +38,13 @@ const MobileButton = ({
           className={addOnButton ? styles.btnLight : styles.hideButton}
           onClick={addOnBack}
         >
-          Back
+          Go Back
         </button>
         <button
           className={addOnButton ? styles.btnDark : styles.hideButton}
           onClick={addOnNext}
         >
-          Next
+          Next Step
         </button>
 
         {/* Summary Buttons */}
@@ -52,7 +52,7 @@ const MobileButton = ({
           className={summaryButton ? styles.btnLight : styles.hideButton}
           onClick={sumBack}
         >
-          Back
+          Go Back
         </button>
         <button
           className={summaryButton ? styles.sumBtn : styles.hideButton}

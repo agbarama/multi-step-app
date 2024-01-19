@@ -33,12 +33,12 @@
     font-weight: bold;
     background-color: hsl(217, 100%, 97%);
     color: hsl(231, 11%, 63%);
-    /* padding: 10px 35px; */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     margin-top: 70px;
     cursor: pointer;
-    margin-right: 216px;
+    margin-right: 189px;
   }
 
   .confirmBtn {
@@ -46,7 +46,7 @@
     /* color: $white; */
     background-color: hsl(243, 100%, 62%);
     color: hsl(0, 0%, 100%);
-    padding: 10px 25px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     margin-top: 70px;

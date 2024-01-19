@@ -50,7 +50,7 @@ const Plans = ({ plansArray, setPlansArray }) => {
           Go Back
         </button>
         <button onClick={next} className={styles.btnDark}>
-          Next
+          Next Step
         </button>
         <MobileButton
           plansButton={plansButton}

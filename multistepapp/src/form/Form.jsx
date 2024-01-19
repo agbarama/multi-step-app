@@ -145,7 +145,7 @@ const Form = () => {
           />
 
           <button onClick={handlePageChange} className={styles.btn}>
-            Next
+            Next Step
           </button>
         </form>
       </div>

@@ -82,12 +82,12 @@
     color: hsl(0, 0%, 100%);
     /* background-color: $marine-blue; */
     /* color: $white; */
-    padding: 2.3% 6.9%;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     margin-top: 16.1%;
     cursor: pointer;
-    margin-left: 58.6%;
+    margin-left: 60%;
   }
 }
 

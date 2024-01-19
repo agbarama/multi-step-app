@@ -38,7 +38,7 @@
     color: hsl(231, 11%, 63%);
     /* background-color: $alabaster; */
     /* color: $cool-gray; */
-    padding: 10px 35px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     margin-top: 70px;
@@ -51,11 +51,12 @@
     color: hsl(0, 0%, 100%);
     /* background-color: $marine-blue; */
     /* color: $white; */
-    padding: 10px 35px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     margin-top: 70px;
     cursor: pointer;
+    margin-left: -60px;
   }
 }
 
