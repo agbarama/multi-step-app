@@ -72,13 +72,13 @@
 
   .container {
     position: relative;
-    top: 70px;
+    top: 15px;
     left: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 470px;
+    /* height: 470px; */
     margin-top: 30px;
   }
 
@@ -134,7 +134,10 @@
     }
 
     .durationSwitch {
+      position: relative;
+      top: 12px;
       width: 300px;
+      padding-bottom: 10px;
     }
 
     .desk-btn {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles/planitem.module.css";
 
 const PlanItem = ({ plan, displayToggleBonus, plans, ...rest }) => {
-  const [isToggle, setIsToggle] = useState();
+  const [isToggle, setIsToggle] = useState(false);
   useEffect(() => {
     setIsToggle(plans.find((item) => (item.name === plan.name ? true : false)));
   }, [plans]);

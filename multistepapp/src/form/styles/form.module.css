@@ -94,7 +94,7 @@
 @media only screen and (max-width: 375px) {
   .formInput {
     position: relative;
-    z-index: 4;
+    /* z-index: 1; */
     width: 20px;
     margin-top: 30px;
     margin-right: 0;
@@ -116,7 +116,7 @@
 
     .err {
       width: 300px;
-      column-gap: 23px;
+      column-gap: 35px;
 
       .name {
         margin-right: 4px;

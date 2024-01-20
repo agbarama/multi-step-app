@@ -1,12 +1,16 @@
 /* desktop style */
 .mobileHeaderContainer {
   display: none;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 375px) {
   .mobileHeaderContainer {
     display: block;
     position: fixed;
+    top: 30px;
+    left: 5px;
+    /* z-index: 1; */
     /* left: 85px; */
     /* top: -160px; */
     /* z-index: 3; */
@@ -18,15 +22,14 @@
       left: 0;
       display: block;
       width: 375px;
-      /* z-index: 1; */
+      z-index: 1;
     }
 
     .mobileHeader {
       display: block;
       position: relative;
       left: 85px;
-      top: -140px;
-      z-index: 3;
+      z-index: 1;
 
       .indicator {
         /* position: relative; */

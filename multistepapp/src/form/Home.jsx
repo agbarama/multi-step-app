@@ -18,18 +18,20 @@ const Home = () => {
   const [confirmButton, setConfirmButton] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <div>
       <MobileHeader togglePage1={togglePage1} />
-      <Navbar togglePage1={togglePage1} />
-      <Form />
-      <MobileButton
-        formButton={formButton}
-        backButton={backButton}
-        nextButton={nextButton}
-        addOnBackButton={addOnBackButton}
-        addOnBackNextButton={addOnNextButton}
-        confirmButton={confirmButton}
-      />
+      <div className={styles.container}>
+        <Navbar togglePage1={togglePage1} />
+        <Form />
+        <MobileButton
+          formButton={formButton}
+          backButton={backButton}
+          nextButton={nextButton}
+          addOnBackButton={addOnBackButton}
+          addOnBackNextButton={addOnNextButton}
+          confirmButton={confirmButton}
+        />
+      </div>
     </div>
   );
 };

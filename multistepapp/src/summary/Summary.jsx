@@ -12,26 +12,28 @@ const Summary = ({ plansArray, toggleDuration }) => {
 
   const [submit, setSubmit] = useState(false);
   return (
-    <div className={styles.container}>
+    <div>
       <MobileHeader togglePage4={togglePage4} />
-      <Navbar togglePage4={togglePage4} />
-      {!submit ? (
-        <SummaryContainer
-          plansArray={plansArray}
-          toggleDuration={toggleDuration}
-          submit={submit}
-          setSubmit={setSubmit}
-        />
-      ) : (
-        <SubmitContainer submit={submit} setSubmit={setSubmit} />
-      )}
-      {/* <SummaryContainer
+      <div className={styles.container}>
+        <Navbar togglePage4={togglePage4} />
+        {!submit ? (
+          <SummaryContainer
+            plansArray={plansArray}
+            toggleDuration={toggleDuration}
+            submit={submit}
+            setSubmit={setSubmit}
+          />
+        ) : (
+          <SubmitContainer submit={submit} setSubmit={setSubmit} />
+        )}
+        {/* <SummaryContainer
          plansArray={plansArray}
          submit={submit}
          setSubmit={setSubmit}
       /> */}
-      {/* <MobileButton /> */}
-      {/* <SubmitContainer submit={submit} setSubmit={setSubmit} /> */}
+        {/* <MobileButton /> */}
+        {/* <SubmitContainer submit={submit} setSubmit={setSubmit} /> */}
+      </div>
     </div>
   );
 };

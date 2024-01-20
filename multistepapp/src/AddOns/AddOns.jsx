@@ -24,26 +24,29 @@ const AddOns = ({ addOnsArray }) => {
     navigate("/summary");
   };
   return (
-    <div className={styles.container}>
+    <div>
       <MobileHeader togglePage3={togglePage3} />
-      <Navbar togglePage3={togglePage3} />
+      <div className={styles.container}>
+        <Navbar togglePage3={togglePage3} />
 
-      <div className={styles.addOns}>
-        <h1 className={styles.h1}>Pick add-ons</h1>
-        <p className={styles.p}>Add-ons help ehance your gaming experience.</p>
-        <AddOnsList addOnsArray={addOnsArray} />
-
-        <button className={styles.btnLight} onClick={back}>
-          Go Back
-        </button>
-        <button className={styles.btnDark} onClick={next}>
-          Next Step
-        </button>
-        <MobileButton
-          addOnButton={addOnButton}
-          addOnBack={back}
-          addOnNext={next}
-        />
+        <div className={styles.addOns}>
+          <h1 className={styles.h1}>Pick add-ons</h1>
+          <p className={styles.p}>
+            Add-ons help ehance your gaming experience.
+          </p>
+          <AddOnsList addOnsArray={addOnsArray} />
+          <button className={styles.btnLight} onClick={back}>
+            Go Back
+          </button>
+          <button className={styles.btnDark} onClick={next}>
+            Next Step
+          </button>
+          <MobileButton
+            addOnButton={addOnButton}
+            addOnBack={back}
+            addOnNext={next}
+          />
+        </div>
       </div>
     </div>
   );

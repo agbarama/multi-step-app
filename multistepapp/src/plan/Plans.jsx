@@ -26,37 +26,39 @@ const Plans = ({ plansArray, setPlansArray }) => {
     navigate("/ads");
   };
   return (
-    <div className={styles.container}>
+    <div>
       <MobileHeader togglePage2={togglePage2} />
-      <Navbar togglePage2={togglePage2} />
-      <div className={styles.plan}>
-        <h1>Select your plan</h1>
-        <p className={styles.p}>
-          You have the option of monthly or yearly billing.
-        </p>
-        <PlanList
-          plansArray={plansArray}
-          setPlansArray={setPlansArray}
-          displayToggleBonus={displayToggleBonus}
-        />
-        <DurationToggle
-          plansArray={plansArray}
-          setPlansArray={setPlansArray}
-          displayToggleBonus={displayToggleBonus}
-          setDisplayToggleBonus={setDisplayToggleBonus}
-        />
+      <div className={styles.container}>
+        <Navbar togglePage2={togglePage2} />
+        <div className={styles.plan}>
+          <h1>Select your plan</h1>
+          <p className={styles.p}>
+            You have the option of monthly or yearly billing.
+          </p>
+          <PlanList
+            plansArray={plansArray}
+            setPlansArray={setPlansArray}
+            displayToggleBonus={displayToggleBonus}
+          />
+          <DurationToggle
+            plansArray={plansArray}
+            setPlansArray={setPlansArray}
+            displayToggleBonus={displayToggleBonus}
+            setDisplayToggleBonus={setDisplayToggleBonus}
+          />
 
-        <button onClick={back} className={styles.btnLight}>
-          Go Back
-        </button>
-        <button onClick={next} className={styles.btnDark}>
-          Next Step
-        </button>
-        <MobileButton
-          plansButton={plansButton}
-          planBack={back}
-          planNext={next}
-        />
+          <button onClick={back} className={styles.btnLight}>
+            Go Back
+          </button>
+          <button onClick={next} className={styles.btnDark}>
+            Next Step
+          </button>
+          <MobileButton
+            plansButton={plansButton}
+            planBack={back}
+            planNext={next}
+          />
+        </div>
       </div>
     </div>
   );
