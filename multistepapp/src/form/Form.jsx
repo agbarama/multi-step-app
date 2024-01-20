@@ -1,15 +1,10 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./styles/form.module.css";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-  // Input value
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
-
-  // Form submit array to save inputs
-  const [formInputs, setFormInputs] = useState([]);
+  // Input values
+  const [formData, setFormData] = useState({ name: "", email: "", number: "" });
 
   // state for Error message
   const [nameErr, setNameErr] = useState("");
@@ -21,42 +16,36 @@ const Form = () => {
   const [isEmailErrBorder, setIsEmailErrBorder] = useState(false);
   const [isPhoneErrBorder, setIsPhoneErrBorder] = useState(false);
 
-  // // Ref DOM manipulated
-  // const nameInput = useRef();
-  // const emailInput = useRef();
-  // const phoneInput = useRef();
-
   // saved inputs in local storage
   const activeName = localStorage.getItem("name");
   const activeEmail = localStorage.getItem("email");
   const activeNumber = localStorage.getItem("phone");
 
-  // On refresh, if any inputs are saved in local storage, pass it to be the inputs value if empty
-  if (name === "" && email === "" && number === "") {
-    setName(activeName);
-    setEmail(activeEmail);
-    setNumber(activeNumber);
-  }
+  useEffect(() => {
+    // On mount, if any inputs are saved in local storage, pass it to be the inputs value if empty
+    if (
+      formData.name === "" &&
+      formData.email === "" &&
+      formData.number === ""
+    ) {
+      setFormData({
+        name: activeName,
+        email: activeEmail,
+        number: activeNumber,
+      });
+    }
+  }, []);
 
   // // variable to navigate to next page
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormInputs({
-      ...formInputs,
-      name: name,
-      email: email,
-      phoneNumber: number,
-    });
-    // setName("");
-    // setEmail("");
-    // setNumber("");
-    console.log(formInputs);
+    const submitedInputs = formData;
   };
 
   const handlePageChange = () => {
-    if (name.trim() === "") {
+    if (formData.name === "") {
       setNameErr("This field is required");
       setIsNameErrBorder(true);
     } else {
@@ -64,7 +53,7 @@ const Form = () => {
       setIsNameErrBorder(false);
     }
 
-    if (email.trim() === "") {
+    if (formData.email === "") {
       setEmailErr("This field is required");
       setIsEmailErrBorder(true);
     } else {
@@ -72,7 +61,7 @@ const Form = () => {
       setIsEmailErrBorder(false);
     }
 
-    if (number.trim() === "") {
+    if (formData.number === "") {
       setPhoneErr("This field is required");
       setIsPhoneErrBorder(true);
     } else {
@@ -80,17 +69,18 @@ const Form = () => {
       setIsPhoneErrBorder(false);
     }
 
-    // // // variable to navigate to next page
-    // const navigate = useNavigate();
-
-    if (name.length > 0 && email.length > 0 && number.length > 0) {
+    if (
+      formData.name.length > 0 &&
+      formData.email.length > 0 &&
+      formData.number.length > 0
+    ) {
       navigate("/plan");
     }
 
     //store inputs to local storage
-    localStorage.setItem("name", name);
-    localStorage.setItem("email", email);
-    localStorage.setItem("phone", number);
+    localStorage.setItem("name", formData.name);
+    localStorage.setItem("email", formData.email);
+    localStorage.setItem("phone", formData.number);
   };
 
   return (
@@ -114,8 +104,10 @@ const Form = () => {
             name="name"
             placeholder="e.g. Stephen King"
             autoComplete="name"
-            value={name || ""}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name || ""}
+            onChange={(e) =>
+              setFormData({ ...formData, name: e.currentTarget.value })
+            }
           />
 
           <div className={styles.err}>
@@ -132,8 +124,10 @@ const Form = () => {
             placeholder="e.g. stephenking@lorem.com"
             autoComplete="email"
             // setting an empty state to empty string rather than null
-            value={email || ""}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email || ""}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.currentTarget.value })
+            }
           />
 
           <div className={styles.err}>
@@ -149,8 +143,10 @@ const Form = () => {
             name="phone"
             placeholder="e.g. +1 234 567 890"
             autoComplete="phone"
-            value={number || ""}
-            onChange={(e) => setNumber(e.target.value)}
+            value={formData.number || ""}
+            onChange={(e) =>
+              setFormData({ ...formData, number: e.currentTarget.value })
+            }
           />
 
           <button onClick={handlePageChange} className={styles.btn}>
