@@ -23,16 +23,18 @@ const Form = () => {
 
   useEffect(() => {
     // On mount, if any inputs are saved in local storage, pass it to be the inputs value if empty
-    if (
-      formData.name === "" &&
-      formData.email === "" &&
-      formData.number === ""
-    ) {
-      setFormData({
-        name: activeName,
-        email: activeEmail,
-        number: activeNumber,
-      });
+    if (activeName !== null && activeEmail !== null && activeNumber !== null) {
+      if (
+        formData.name === "" &&
+        formData.email === "" &&
+        formData.number === ""
+      ) {
+        setFormData({
+          name: activeName,
+          email: activeEmail,
+          number: activeNumber,
+        });
+      }
     }
   }, []);
 
