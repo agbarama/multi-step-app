@@ -25,7 +25,7 @@ const AddOnsItem = ({ addOn, addOns, ...rest }) => {
         }}
       />
       <div className={styles.spaceBetween}>
-        <div>
+        <div className={styles.div}>
           <p className={styles.addOnsType}>{addOn.name}</p>
           <p className={styles.addOnsText}>{addOn.access}</p>
         </div>

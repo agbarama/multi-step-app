@@ -61,6 +61,7 @@
   }
 }
 
+/* Iphone SE */
 @media only screen and (max-width: 375px) {
   .btnLight {
     display: none;
@@ -110,27 +111,68 @@
       /* // margin-bottom: 20px; */
     }
 
-    .boxes {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px 0;
-      margin-bottom: 20px;
+    /* .durationSwitch {
+      position: relative;
+      top: 12px;
+      width: 300px;
+      padding-bottom: 10px;
+    } */
 
-      .box {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        width: 250px;
-        padding: 20px 10px;
-        padding-right: 50px;
-        border-radius: 10px;
+    .desk-btn {
+      display: none;
+    }
+  }
+}
 
-        .icons {
-          margin-bottom: 0;
-        }
-      }
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .btnLight {
+    display: none;
+  }
+
+  .btnDark {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+    top: 25px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 600px;
+    margin-top: 30px;
+  }
+
+  .plan {
+    width: 350px;
+    margin-top: 50px;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    margin: 20px 10px;
+    color: hsl(213, 96%, 18%);
+
+    /* color: $marine-blue; */
+
+    /* // width: 280px;
+    // margin-top: 30px;
+    // margin-right: 0;
+    // margin-left: 0;
+    // margin: 20px 10px; */
+    h1 {
+      font-size: 30px;
+      width: 240px;
+      margin-top: 15px;
+    }
+
+    .p {
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 30px;
     }
 
     .durationSwitch {

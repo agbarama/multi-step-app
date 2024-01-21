@@ -16,3 +16,16 @@
     margin: 0;
   }
 }
+
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .total {
+    .sum {
+      font-size: 18px;
+    }
+
+    .totalPrice {
+      font-size: 18px;
+    }
+  }
+}

@@ -60,6 +60,7 @@
   /* border: 1px solid $purplish-blue; */
 }
 
+/* Iphone SE */
 @media only screen and (max-width: 375px) {
   .box {
     display: flex;
@@ -91,6 +92,39 @@
 
       .price {
         font-size: 13px;
+        /* // margin-left: 20px; */
+      }
+    }
+  }
+}
+
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .box {
+    width: 300px;
+    column-gap: 20px;
+
+    input {
+      width: 30px;
+    }
+
+    .spaceBetween {
+      width: 330px;
+      row-gap: 20px;
+
+      .div {
+        .addOnsType {
+          font-size: 20px;
+          margin-bottom: 3px;
+        }
+
+        .addOnsText {
+          font-size: 15px;
+        }
+      }
+
+      .price {
+        font-size: 15px;
         /* // margin-left: 20px; */
       }
     }

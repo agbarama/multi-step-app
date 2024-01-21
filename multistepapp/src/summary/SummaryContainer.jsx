@@ -71,7 +71,7 @@ const SummaryContainer = ({
   return (
     <div className={`${styles.summaryContainer}  ${submit ? styles.hide : ""}`}>
       <div className={styles.summary}>
-        <h1 className={styles.h}>Finishing up</h1>
+        <h1 className={styles.h1}>Finishing up</h1>
         <p className={styles.p}>
           Double-check everything look Ok before confirming.
         </p>

@@ -91,6 +91,7 @@
   }
 }
 
+/* Iphone SE */
 @media only screen and (max-width: 375px) {
   .formInput {
     position: relative;
@@ -137,6 +138,61 @@
     input {
       padding: 13px 10px;
       padding-right: 120px;
+    }
+
+    .btn {
+      display: none;
+    }
+  }
+}
+
+/* Iphone XR */
+@media only screen and (max-width: 414px) {
+  .formInput {
+    position: relative;
+    /* z-index: 1; */
+    width: 20px;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-left: 0;
+    margin: 20px 10px;
+
+    .header {
+      width: 240px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    label {
+      width: 120px;
+    }
+
+    .err {
+      width: 300px;
+      column-gap: 35px;
+
+      .name {
+        margin-right: 4px;
+      }
+
+      .email {
+        margin-right: 4px;
+      }
+
+      .phone {
+        margin-right: 3px;
+      }
+
+      label {
+        width: 150px;
+      }
+    }
+    input {
+      padding: 13px 10px;
+      padding-right: 150px;
     }
 
     .btn {

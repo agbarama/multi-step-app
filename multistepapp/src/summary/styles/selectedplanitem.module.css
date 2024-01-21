@@ -25,3 +25,22 @@
     margin: 0;
   }
 }
+
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .selectedPlan {
+    .div {
+      .duration {
+        font-size: 18px;
+      }
+
+      .price {
+        font-size: 18px;
+      }
+    }
+
+    .review {
+      font-size: 18px;
+    }
+  }
+}

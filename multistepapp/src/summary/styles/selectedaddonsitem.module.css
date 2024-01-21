@@ -18,3 +18,19 @@
     margin: 0;
   }
 }
+
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .div {
+    /* // column-gap: 220px; */
+    margin: 20px 0;
+
+    .access {
+      font-size: 18px;
+    }
+
+    .accessPrice {
+      font-size: 18px;
+    }
+  }
+}

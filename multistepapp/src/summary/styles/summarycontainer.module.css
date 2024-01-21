@@ -58,6 +58,7 @@
   display: none;
 }
 
+/* Iphone SE */
 @media only screen and (max-width: 375px) {
   .summaryContainer {
     position: relative;
@@ -81,6 +82,46 @@
     }
 
     .desk-btn {
+      display: none;
+    }
+  }
+
+  .btnLight {
+    display: none;
+  }
+  .confirmBtn {
+    display: none;
+  }
+}
+
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .summaryContainer {
+    position: relative;
+    z-index: 4;
+    width: 330px;
+    margin-top: 50px;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    margin: 20px 10px;
+    /* color: $marine-blue; */
+
+    .h1 {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    .p {
+      font-size: 18px;
+      /* line-height: 22px; */
+    }
+    p {
+      line-height: 22px;
+    }
+
+    .deskBtn {
       display: none;
     }
   }

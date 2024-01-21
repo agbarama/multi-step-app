@@ -60,6 +60,7 @@
   }
 }
 
+/* Iphone SE */
 @media only screen and (max-width: 375px) {
   .btnLight {
     display: none;
@@ -100,6 +101,52 @@
       font-size: 15px;
       line-height: 22px;
       margin-bottom: 20px;
+    }
+  }
+}
+
+/* Iphone XR */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .btnLight {
+    display: none;
+  }
+
+  .btnDark {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+    top: 15px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 480px;
+    margin-top: 30px;
+  }
+
+  .addOns {
+    width: 350px;
+    margin-top: 50px;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    margin: 20px 10px;
+    color: hsl(213, 96%, 18%);
+    /* color: $marine-blue; */
+
+    .h1 {
+      font-size: 25px;
+      margin-top: 15px;
+    }
+
+    .p {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 30px;
     }
   }
 }

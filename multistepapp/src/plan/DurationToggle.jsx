@@ -48,7 +48,7 @@ const DurationToggle = ({
         <div className={styles.switchIndicator}></div>
       </div>
       <p
-        className={`${styles.yDur} ${toggledDuration ? styles.durToggle : ""}`}
+        className={`${styles.yrDur} ${toggledDuration ? styles.durToggle : ""}`}
       >
         Yearly
       </p>
