@@ -6,7 +6,7 @@ import styles from "./styles/summary.module.css";
 import SummaryContainer from "./SummaryContainer";
 import SubmitContainer from "./SubmitContainer";
 
-const Summary = ({ plansArray, toggleDuration }) => {
+const Summary = ({ plansArray, toggleDuration, onSubmit }) => {
   // Page indicator
   const [togglePage4, setTogglePage4] = useState(true);
 
@@ -22,6 +22,7 @@ const Summary = ({ plansArray, toggleDuration }) => {
             toggleDuration={toggleDuration}
             submit={submit}
             setSubmit={setSubmit}
+            onSubmit={onSubmit}
           />
         ) : (
           <SubmitContainer submit={submit} setSubmit={setSubmit} />

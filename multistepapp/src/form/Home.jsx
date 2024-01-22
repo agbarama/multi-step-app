@@ -5,12 +5,12 @@ import Navbar from "./Navbar";
 import Form from "./Form";
 import MobileButton from "./MobileButton";
 
-const Home = () => {
+const Home = ({ formData, setFormData, handleSubmit }) => {
   // Page indicator
   const [togglePage1, setTogglePage1] = useState(true);
 
   // Mobile buttons
-  const [formButton, setFormButton] = useState(true);
+  const [formButton, setFormButton] = useState(false);
   const [backButton, setBackButton] = useState(false);
   const [nextButton, setNextButton] = useState(false);
   const [addOnBackButton, setAddOnBackButton] = useState(false);
@@ -22,7 +22,11 @@ const Home = () => {
       <MobileHeader togglePage1={togglePage1} />
       <div className={styles.container}>
         <Navbar togglePage1={togglePage1} />
-        <Form />
+        <Form
+          formData={formData}
+          setFormData={setFormData}
+          handleSubmit={handleSubmit}
+        />
         <MobileButton
           formButton={formButton}
           backButton={backButton}

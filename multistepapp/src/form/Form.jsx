@@ -2,10 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./styles/form.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Form = () => {
-  // Input values
-  const [formData, setFormData] = useState({ name: "", email: "", number: "" });
-
+const Form = ({ formData, setFormData, handleSubmit }) => {
   // state for Error message
   const [nameErr, setNameErr] = useState("");
   const [emailErr, setEmailErr] = useState("");
@@ -41,12 +38,9 @@ const Form = () => {
   // // variable to navigate to next page
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handlePageChange = (e) => {
     e.preventDefault();
-    const submitedInputs = formData;
-  };
 
-  const handlePageChange = () => {
     if (formData.name === "") {
       setNameErr("This field is required");
       setIsNameErrBorder(true);
@@ -89,8 +83,10 @@ const Form = () => {
     <div>
       <div className={styles.formInput}>
         <div className={styles.header}>
-          <h1>Personal Info</h1>
-          <p>Please provide your name, email address and phone number.</p>
+          <h1 className={styles.header}>Personal Info</h1>
+          <p className={styles.p}>
+            Please provide your name, email address and phone number.
+          </p>
         </div>
         <form onSubmit={handleSubmit}>
           <div className={styles.err}>
@@ -155,6 +151,11 @@ const Form = () => {
             Next Step
           </button>
         </form>
+      </div>
+      <div className={styles.btnContainer}>
+        <button onClick={(e) => handlePageChange} className={styles.mobBtn}>
+          Next Step
+        </button>
       </div>
     </div>
   );

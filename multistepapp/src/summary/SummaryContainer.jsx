@@ -11,6 +11,7 @@ const SummaryContainer = ({
   toggleDuration,
   submit,
   setSubmit,
+  onSubmit,
 }) => {
   const savedPlans = JSON.parse(localStorage.getItem("summaryPlan"));
   const savedAddOns = JSON.parse(localStorage.getItem("summaryAddOns"));
@@ -64,6 +65,7 @@ const SummaryContainer = ({
 
   const submitButton = () => {
     setInterval(() => {
+      onSubmit();
       setSubmit(true);
       localStorage.clear();
     }, 1000);

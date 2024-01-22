@@ -8,6 +8,8 @@ import Summary from "./summary/Summary";
 import { monAddOnsArray, yearlyAddOnsArray } from "./AddOns/data/addOnsArray";
 
 const RoutesContainer = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", number: "" });
+
   const [plansArray, setPlansArray] = useState(mPlans);
   const [addOnsArray, setAddOnsArray] = useState(monAddOnsArray);
   const [toggleDuration, setToggleDuration] = useState(false);
@@ -25,10 +27,27 @@ const RoutesContainer = () => {
     setToggleDuration(plansArray === yPlans ? true : false);
   }, [plansArray]);
 
+  const handleSubmit = (e) => {
+    // e.preventDefault();
+    const submitedInputs = formData;
+    console.log(submitedInputs);
+
+    setFormData({ name: "", email: "", number: "" });
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route
+          path="/"
+          element={
+            <Home
+              formData={formData}
+              setFormData={setFormData}
+              handleSubmit={handleSubmit}
+            />
+          }
+        ></Route>
         <Route
           path="/plan"
           element={
@@ -42,7 +61,11 @@ const RoutesContainer = () => {
         <Route
           path="/summary"
           element={
-            <Summary plansArray={plansArray} toggleDuration={toggleDuration} />
+            <Summary
+              plansArray={plansArray}
+              toggleDuration={toggleDuration}
+              onSubmit={handleSubmit}
+            />
           }
         ></Route>
       </Routes>
