@@ -14,10 +14,10 @@ const RoutesContainer = () => {
   const [addOnsArray, setAddOnsArray] = useState(monAddOnsArray);
   const [toggleDuration, setToggleDuration] = useState(false);
 
-  // useEffect(() => {
-  //   // Set the location to the home page on component mount
-  //   window.location.pathname === "/" || (window.location.href = "/");
-  // }, []);
+  useEffect(() => {
+    // Set the location to the home page on component mount
+    window.location.pathname === "/" || (window.location.href = "/");
+  }, []);
 
   useEffect(() => {
     setAddOnsArray(plansArray === yPlans ? yearlyAddOnsArray : monAddOnsArray);
