@@ -13,12 +13,14 @@ const DurationToggle = ({
   const [toggledDuration, setToggledDuration] = useState(false);
 
   let activeSwitch = localStorage.getItem("activeS");
-  if (activeSwitch == toggled) {
-    setToggled(true);
-    setToggledDuration(true);
-    setDisplayToggleBonus(true);
-    setPlansArray(yPlans);
-  }
+  useEffect(() => {
+    if (activeSwitch == toggled) {
+      setToggled(true);
+      setToggledDuration(true);
+      setDisplayToggleBonus(true);
+      setPlansArray(yPlans);
+    }
+  }, []);
 
   const handleClick = () => {
     setToggled(!toggled);

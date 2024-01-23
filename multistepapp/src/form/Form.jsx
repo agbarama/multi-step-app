@@ -153,7 +153,7 @@ const Form = ({ formData, setFormData, handleSubmit }) => {
         </form>
       </div>
       <div className={styles.btnContainer}>
-        <button onClick={(e) => handlePageChange} className={styles.mobBtn}>
+        <button onClick={handlePageChange} className={styles.mobBtn}>
           Next Step
         </button>
       </div>
